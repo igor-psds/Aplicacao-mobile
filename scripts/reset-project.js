@@ -25,7 +25,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Text>Edit app/index.js to edit this screen.</Text>
     </View>
   );
 }
@@ -54,12 +54,12 @@ fs.rename(oldDirPath, newDirPath, (error) => {
     }
     console.log('New /app directory created.');
 
-    const indexPath = path.join(newAppDirPath, 'index.tsx');
+    const indexPath = path.join(newAppDirPath, 'index.js');
     fs.writeFile(indexPath, indexContent, (error) => {
       if (error) {
-        return console.error(`Error creating index.tsx: ${error}`);
+        return console.error(`Error creating index.js: ${error}`);
       }
-      console.log('app/index.tsx created.');
+      console.log('app/index.js created.');
 
       const layoutPath = path.join(newAppDirPath, '_layout.tsx');
       fs.writeFile(layoutPath, layoutContent, (error) => {
